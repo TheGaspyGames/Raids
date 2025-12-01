@@ -78,6 +78,5 @@ client.on('messageCreate', async (message) => {
 });
 
 // ------------------- LOGIN -------------------
-client.login('
-');
+client.login(os.getenv("TOKEN");
 
