@@ -78,5 +78,12 @@ client.on('messageCreate', async (message) => {
 });
 
 // ------------------- LOGIN -------------------
-client.login(os.getenv("TOKEN");
+const token = process.env.TOKEN;
+
+if (!token) {
+    console.error("❌ No se encontró la variable de entorno TOKEN");
+    process.exit(1);
+}
+
+client.login(token);
 
