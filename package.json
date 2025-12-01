@@ -1,0 +1,16 @@
+{
+  "name": "ultra-centinela-bot",
+  "version": "1.0.0",
+  "description": "Bot de Discord ultrarrápido que borra y crea 500 canales con autotuning y RPC",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "TuNombre",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.16.0",
+    "dotenv": "^16.3.1"
+  }
+}
+
