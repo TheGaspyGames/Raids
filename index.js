@@ -61,9 +61,12 @@ client.on('ready', () => {
 // ------------------- MENSAJES -------------------
 client.on('messageCreate', async (message) => {
     if (message.author.bot || !message.guild) return;
-    if (!message.content.startsWith('!')) return;
 
-    const args = message.content.slice(1).trim().split(/ +/);
+    const prefixes = ['!', '.'];
+    const usedPrefix = prefixes.find(prefix => message.content.startsWith(prefix));
+    if (!usedPrefix) return;
+
+    const args = message.content.slice(usedPrefix.length).trim().split(/ +/);
     const cmd = args.shift().toLowerCase();
 
     if (client.commands.has(cmd)) {
